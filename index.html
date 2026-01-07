@@ -16,6 +16,7 @@
   <a href="services.html">Services</a>
   <a href="#pricing">Pricing</a>
   <a href="contact.html">Contact</a>
+  <a href="login.html">Login</a>
 </nav>
 
 <!-- HERO -->
@@ -33,6 +34,13 @@
     <a href="https://www.instagram.com/sarahscott_ib/" class="btn secondary">DM Us on Instagram "AUTOMATION"</a>
     <a href="https://wa.me/XXXXXXXXXX" class="btn">Chat on WhatsApp</a>
   </div>
+</section>
+<section class="section">
+  <h3>Trusted by Industry Leaders & Innovators</h3>
+
+  <p>
+    Years of Industry Experience • Successful Clients • Proven Systems
+  </p>
 </section>
 
 <!-- SERVICES -->
@@ -152,15 +160,29 @@
 
 <!-- FOOTER -->
 <footer>
-  <p>Email: autoscale218@gmail.com</p>
-  <p>Instagram: @sarahscott_ib</p>
+  <p>© 2026 AutoScale AI</p>
   <p>
-  Ready to automate your business? 
-  <a href="https://calendly.com/shael7174/30min">Book a free call</a>
-</p>
-  <p>Book a Call: Available on request</p>
-  <p>© 2026 AutoScale AI. All rights reserved.</p>
+    <a href="#">Privacy Policy</a> |
+    <a href="#">Terms of Service</a> |
+    <a href="#">Cookies</a>
+  </p>
+  <p>Email: autoscale218@gmail.com</p>
 </footer>
+<!-- footer end -->
+<div id="cookie-banner" style="position:fixed;bottom:0;width:100%;background:#111;color:#fff;padding:10px;text-align:center;">
+  We use cookies to improve user experience.
+  <button onclick="acceptCookies()" class="btn">Accept</button>
+</div>
+
+<script>
+function acceptCookies() {
+  document.getElementById('cookie-banner').style.display = 'none';
+  localStorage.setItem('cookiesAccepted', 'true');
+}
+if(localStorage.getItem('cookiesAccepted')) {
+  document.getElementById('cookie-banner').style.display = 'none';
+}
+</script>
 
 <script src="//code.tidio.co/fxkcjb63wkagyvlf4ylbn4woxtbw8sm4.js" async></script>
 </body>
