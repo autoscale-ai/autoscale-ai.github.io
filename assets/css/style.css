@@ -174,3 +174,43 @@ footer a {
   margin-top: 10px;
   font-size: 16px;
 }
+.pro-footer {
+  background: #020617;
+  padding: 50px 20px;
+  border-top: 1px solid #1e293b;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 30px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.pro-footer h3, .pro-footer h4 {
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.pro-footer p, .pro-footer a {
+  color: #94a3b8;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.pro-footer a:hover {
+  color: #38bdf8;
+}
+
+.pro-footer .btn {
+  margin-top: 10px;
+  padding: 10px 18px;
+}
+
+.copyright {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 13px;
+  color: #64748b;
+}
