@@ -10,7 +10,7 @@
 body {
   background: #0f172a;
   color: #e5e7eb;
-  line-height: 1.7;
+  line-height: 1.6;
 }
 
 /* NAV */
@@ -18,138 +18,133 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 18px 40px;
+  padding: 16px 40px;
   background: #020617;
   border-bottom: 1px solid #1e293b;
-}
-
-.nav-left,
-.nav-right {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-}
-
-.logo {
-  font-weight: 700;
-  color: #38bdf8;
-  text-decoration: none;
 }
 
 .nav a {
   color: #e5e7eb;
   text-decoration: none;
   font-weight: 500;
-  transition: 0.3s;
+  margin-right: 18px;
 }
 
 .nav a:hover {
   color: #38bdf8;
 }
 
-.nav-btn {
-  padding: 10px 20px;
-  font-size: 14px;
+.logo {
+  font-weight: 700;
+  font-size: 18px;
+}
+
+/* BUTTON */
+.btn {
+  display: inline-block;
+  padding: 14px 26px;
+  background: #38bdf8;
+  color: #020617;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.btn:hover {
+  background: #0ea5e9;
+  transform: translateY(-2px);
 }
 
 /* HERO */
 .hero {
   text-align: center;
-  padding: 100px 20px;
+  padding: 90px 20px;
   background: radial-gradient(circle at top, #1e3a8a, #020617);
 }
 
 .hero h1 {
   font-size: 44px;
   margin-bottom: 15px;
-  color: #fff;
+  color: #ffffff;
 }
 
 .hero p {
-  max-width: 760px;
-  margin: 10px auto;
+  max-width: 720px;
+  margin: 0 auto 10px;
   font-size: 18px;
   color: #cbd5f5;
 }
 
-.hero .btn {
-  margin: 10px 6px;
-}
-
-/* BUTTON */
-.btn {
-  display: inline-block;
-  padding: 14px 28px;
-  background: #38bdf8;
-  color: #020617;
-  border-radius: 6px;
-  text-decoration: none;
-  font-weight: 600;
-  transition: 0.3s;
-}
-
-.btn:hover {
-  background: #0ea5e9;
-}
-
 /* SECTION */
 .section {
-  padding: 80px 20px;
+  padding: 70px 20px;
   text-align: center;
 }
 
-/* CARDS GRID */
-.pricing-cards {
+.section h2 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.section p {
+  color: #cbd5f5;
+}
+
+/* CARDS */
+.pricing-cards,
+.cards {
   display: flex;
   justify-content: center;
-  gap: 25px;
-  margin-top: 40px;
+  gap: 22px;
+  margin-top: 35px;
   flex-wrap: wrap;
 }
 
 .card {
   background: #1e293b;
-  padding: 28px;
+  padding: 26px;
   border-radius: 14px;
   width: 300px;
   border: 1px solid #1e293b;
-  transition: 0.3s;
+  transition: 0.3s ease;
 }
 
 .card:hover {
-  transform: translateY(-6px);
+  transform: translateY(-8px);
   border-color: #38bdf8;
 }
 
 .card h3 {
-  margin-bottom: 12px;
+  margin-bottom: 10px;
 }
 
+.card h1 {
+  font-size: 36px;
+  margin: 10px 0;
+}
+
+/* LIST */
 .card ul {
   list-style: none;
-  margin-top: 15px;
+  margin: 15px 0;
 }
 
 .card ul li {
   margin: 8px 0;
-}
-
-/* FEATURED PLAN */
-.featured {
-  border: 2px solid #38bdf8;
+  font-size: 15px;
 }
 
 /* STEPS */
 .steps {
   max-width: 600px;
-  margin: auto;
+  margin: 25px auto;
   list-style: none;
-  font-size: 18px;
   text-align: left;
 }
 
 .steps li {
-  margin: 15px 0;
+  margin: 12px 0;
   padding-left: 10px;
   border-left: 3px solid #38bdf8;
 }
@@ -157,7 +152,7 @@ body {
 /* FOOTER */
 footer {
   background: #020617;
-  padding: 40px 15px;
+  padding: 35px 15px;
   text-align: center;
   border-top: 1px solid #1e293b;
 }
@@ -169,48 +164,23 @@ footer a {
   text-decoration: none;
 }
 
-.trust p {
-  color: #cbd5f5;
-  margin-top: 10px;
-  font-size: 16px;
-}
-.pro-footer {
-  background: #020617;
-  padding: 50px 20px;
-  border-top: 1px solid #1e293b;
-}
-
-.footer-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 30px;
-  max-width: 1100px;
-  margin: auto;
-}
-
-.pro-footer h3, .pro-footer h4 {
-  color: #fff;
-  margin-bottom: 10px;
-}
-
-.pro-footer p, .pro-footer a {
-  color: #94a3b8;
-  font-size: 14px;
-  text-decoration: none;
-}
-
-.pro-footer a:hover {
+footer a:hover {
   color: #38bdf8;
 }
 
-.pro-footer .btn {
-  margin-top: 10px;
-  padding: 10px 18px;
-}
+/* MOBILE FIX */
+@media (max-width: 768px) {
+  .nav {
+    flex-direction: column;
+    gap: 12px;
+  }
 
-.copyright {
-  text-align: center;
-  margin-top: 30px;
-  font-size: 13px;
-  color: #64748b;
+  .hero h1 {
+    font-size: 34px;
+  }
+
+  .card {
+    width: 100%;
+    max-width: 340px;
+  }
 }
