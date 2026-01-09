@@ -273,3 +273,26 @@ footer a:hover {
   color: #cbd5f5;
   line-height: 1.6;
 }
+/* Founder section spacing fix */
+.founder-section {
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+
+.founder-section h2 {
+  margin-bottom: 12px;
+}
+
+.founder-section h4,
+.founder-section h5 {
+  margin-bottom: 20px;
+}
+
+.founder-section img {
+  margin: 22px 0;   /* image ke upar & neeche space */
+}
+
+.founder-section p {
+  margin-top: 18px;
+  line-height: 1.7;
+}
