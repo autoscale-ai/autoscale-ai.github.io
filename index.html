@@ -589,6 +589,25 @@ function saveLead(name, email, message) {
     <button id="decline-cookies">Decline</button>
   </div>
 </div>
+<script>
+  const banner = document.getElementById("cookie-banner");
+  const acceptBtn = document.getElementById("accept-cookies");
+  const declineBtn = document.getElementById("decline-cookies");
+
+  if (!localStorage.getItem("cookiesAccepted")) {
+    banner.style.display = "block";
+  }
+
+  acceptBtn.onclick = () => {
+    localStorage.setItem("cookiesAccepted", "yes");
+    banner.style.display = "none";
+  };
+
+  declineBtn.onclick = () => {
+    localStorage.setItem("cookiesAccepted", "no");
+    banner.style.display = "none";
+  };
+</script>
 
 </body>
 </html>
