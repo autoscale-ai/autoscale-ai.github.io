@@ -618,6 +618,24 @@ function saveLead(name, email, message) {
     banner.style.display = "none";
   };
 </script>
+<script>
+function unlockSite() {
+  const response = grecaptcha.getResponse();
+  if (!response) {
+    alert("Please verify you are human.");
+    return;
+  }
+
+  document.getElementById("human-check").style.display = "none";
+  localStorage.setItem("human_verified", "yes");
+}
+
+window.onload = () => {
+  if (localStorage.getItem("human_verified") === "yes") {
+    document.getElementById("human-check").style.display = "none";
+  }
+};
+</script>
 
 </body>
 </html>
