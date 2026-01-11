@@ -1,38 +1,56 @@
-/* ===== RESET ===== */
+/* ================= RESET ================= */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  font-family: 'Inter', system-ui, sans-serif;
-  background: radial-gradient(circle at top, #050b1c, #020617);
-  color: #e5e7eb;
-  line-height: 1.6;
-  overflow-x: hidden;
-}
-
-/* ===== GLOBAL CONTAINER ===== */
-.container {
+html, body {
   width: 100%;
+  overflow-x: hidden;
+  font-family: 'Inter', sans-serif;
+  background: #020617;
+  color: #e5e7eb;
+}
+
+/* ================= NAV ================= */
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(2,6,23,0.85);
+  backdrop-filter: blur(10px);
+  z-index: 999;
+}
+
+.nav-inner {
   max-width: 1200px;
   margin: auto;
-  padding: 0 20px;
+  padding: 14px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-/* ===== HERO SECTION ===== */
+nav a {
+  color: #e5e7eb;
+  text-decoration: none;
+  margin-left: 18px;
+  font-size: 14px;
+}
+
+nav a:hover {
+  color: #38bdf8;
+}
+
+/* ================= HERO ================= */
 .hero-video {
   position: relative;
-  height: 100vh;
-  width: 100%;
+  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 120px 20px 80px;
   text-align: center;
 }
 
@@ -48,156 +66,166 @@ body {
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to bottom, rgba(2,6,23,.9), rgba(2,6,23,.95));
+  background: radial-gradient(circle at center, rgba(2,6,23,0.3), #020617 70%);
   z-index: -1;
 }
 
 .hero-content {
   max-width: 900px;
-  padding: 20px;
 }
 
 .hero-content h1 {
-  font-size: clamp(2.2rem, 4vw, 3.6rem);
+  font-size: clamp(32px, 5vw, 56px);
   font-weight: 800;
-  margin-bottom: 15px;
 }
 
 .hero-content p {
-  font-size: 1.05rem;
+  margin-top: 14px;
+  font-size: 18px;
   color: #cbd5f5;
-  margin-bottom: 25px;
 }
 
-/* ===== HERO BUTTONS ===== */
+/* ================= BUTTONS ================= */
 .hero-buttons {
+  margin-top: 28px;
   display: flex;
   gap: 14px;
-  justify-content: center;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .btn {
   padding: 14px 22px;
-  border-radius: 10px;
-  background: linear-gradient(135deg, #2563eb, #38bdf8);
-  color: #fff;
+  border-radius: 8px;
+  background: #38bdf8;
+  color: #020617;
+  text-decoration: none;
   font-weight: 600;
-  explain text-decoration: none;
-  transition: transform .2s ease, box-shadow .2s ease;
-}
-
-.btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 10px 30px rgba(56,189,248,.35);
 }
 
 .btn.outline {
   background: transparent;
   border: 1px solid #38bdf8;
+  color: #38bdf8;
 }
 
 .btn.ghost {
   background: transparent;
-  border: 1px solid #475569;
+  color: #94a3b8;
 }
 
-/* ===== SECTIONS ===== */
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+/* ================= SECTIONS ================= */
 .section {
-  padding: 90px 0;
+  padding: 90px 20px;
   text-align: center;
 }
 
 .section h2 {
-  font-size: 2.1rem;
+  font-size: 36px;
   margin-bottom: 14px;
 }
 
 .section p {
-  max-width: 760px;
-  margin: 0 auto 30px;
+  max-width: 780px;
+  margin: auto;
   color: #94a3b8;
 }
 
-/* ===== MOCKUPS ===== */
+/* ================= MOCKUPS ================= */
 .mockups {
+  margin-top: 50px;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 22px;
-  margin-top: 40px;
+  grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
+  gap: 24px;
+  max-width: 1100px;
+  margin-inline: auto;
 }
 
 .mockups img {
   width: 100%;
-  border-radius: 14px;
-  object-fit: cover;
-  background: #020617;
+  border-radius: 16px;
+  box-shadow: 0 30px 60px rgba(0,0,0,0.6);
 }
 
-/* ===== CARDS ===== */
+/* ================= TRUST CARDS ================= */
 .pricing-cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
   gap: 24px;
-  margin-top: 40px;
+  max-width: 1100px;
+  margin: 40px auto 0;
 }
 
 .card {
-  background: linear-gradient(180deg, #020617, #020617);
-  border: 1px solid #1e293b;
-  border-radius: 16px;
+  background: rgba(255,255,255,0.04);
   padding: 30px;
+  border-radius: 16px;
 }
 
-/* ===== CEO / FOUNDER ===== */
+/* ================= FOUNDER / CEO ================= */
 .profile {
-  max-width: 380px;
-  margin: 40px auto;
+  margin-top: 40px;
 }
 
 .profile img {
-  width: 100%;
-  border-radius: 16px;
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #38bdf8;
 }
 
 .profile h3 {
   margin-top: 16px;
 }
 
-/* ===== FOOTER ===== */
+/* ================= PRICING ================= */
+.pricing {
+  max-width: 900px;
+  margin: auto;
+}
+
+.pricing .card {
+  border: 1px solid rgba(255,255,255,0.08);
+}
+
+/* ================= FOOTER ================= */
 footer {
-  padding: 50px 20px;
+  padding: 40px 20px;
   text-align: center;
-  border-top: 1px solid #1e293b;
+  font-size: 14px;
   color: #94a3b8;
 }
 
-/* ===== COOKIE BANNER ===== */
+/* ================= COOKIE ================= */
 #cookie-banner {
   position: fixed;
   bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
+  left: 20px;
   background: #020617;
-  border: 1px solid #1e293b;
-  padding: 16px 20px;
-  border-radius: 14px;
+  padding: 18px;
+  border-radius: 12px;
+  max-width: 320px;
   display: none;
-  max-width: 90%;
   z-index: 9999;
 }
 
-.cookie-actions button {
-  margin: 8px;
-  padding: 10px 16px;
-  border-radius: 8px;
+#cookie-banner button {
+  margin-top: 10px;
+  padding: 8px 14px;
+  border-radius: 6px;
   border: none;
-  cursor: pointer;
+  background: #38bdf8;
 }
 
-/* ===== MOBILE FIX ===== */
+/* ================= MOBILE ================= */
 @media (max-width: 768px) {
-  .hero-video {
-    height: 90vh;
+  .hero-buttons {
+    flex-direction: column;
   }
 }
+
