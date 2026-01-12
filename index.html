@@ -589,7 +589,92 @@
 </footer>
   
 <!--harami footer end-->
-  
+  <!--java after footer add by zohaib-->
+  <script src="//code.tidio.co/fxkcjb63wkagyvlf4ylbn4woxtbw8sm4.js" async></script>
+  <script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+  import { getFirestore } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
+
+  const firebaseConfig = {
+    apiKey: "AIzaSyD65AdWBjfQd6mq9kddH-CPIHnyURxlh8M",
+    authDomain: "autoscale-ai-7ba19.firebaseapp.com",
+    projectId: "autoscale-ai-7ba19",
+    storageBucket: "autoscale-ai-7ba19.firebasestorage.app",
+    messagingSenderId: "83492889164",
+    appId: "1:83492889164:web:29ff7d38bde24cb4cd4ae9"
+  };
+
+  const app = initializeApp(firebaseConfig);
+  const db = getFirestore(app);
+
+  console.log("Firebase connected successfully");
+</script>
+  <script>
+function saveLead(name, email, message) {
+  db.collection("leads").add({
+    name: name,
+    email: email,
+    message: message,
+    createdAt: firebase.firestore.FieldValue.serverTimestamp()
+  })
+  .then(() => {
+    alert("Thank you! We will contact you shortly.");
+  })
+  .catch((error) => {
+    alert("Error saving data");
+    console.error(error);
+  });
+}
+</script>
+<!-- COOKIE CONSENT -->
+<div id="cookie-banner">
+  <p>
+    We use cookies to improve your experience, analyze traffic, and personalize content.
+    <a href="#" target="_blank">Learn more</a>
+  </p>
+  <div class="cookie-actions">
+    <button id="accept-cookies">Accept</button>
+    <button id="decline-cookies">Decline</button>
+  </div>
+</div>
+<script>
+  const banner = document.getElementById("cookie-banner");
+  const acceptBtn = document.getElementById("accept-cookies");
+  const declineBtn = document.getElementById("decline-cookies");
+
+  if (!localStorage.getItem("cookiesAccepted")) {
+    banner.style.display = "block";
+  }
+
+  acceptBtn.onclick = () => {
+    localStorage.setItem("cookiesAccepted", "yes");
+    banner.style.display = "none";
+  };
+
+  declineBtn.onclick = () => {
+    localStorage.setItem("cookiesAccepted", "no");
+    banner.style.display = "none";
+  };
+</script>
+<script>
+function unlockSite() {
+  const response = grecaptcha.getResponse();
+  if (!response) {
+    alert("Please verify you are human.");
+    return;
+  }
+
+  document.getElementById("human-check").style.display = "none";
+  localStorage.setItem("human_verified", "yes");
+}
+
+window.onload = () => {
+  if (localStorage.getItem("human_verified") === "yes") {
+    document.getElementById("human-check").style.display = "none";
+  }
+};
+</script>
+<!--after footer add by zohaib-->
 <script>
 function unlockSite(){
   document.getElementById("human-check").style.display="none";
