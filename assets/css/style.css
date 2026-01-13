@@ -1265,3 +1265,105 @@ a { color: inherit; text-decoration: none; }
     margin: 10px auto 0;
   }
 }
+/* =taking risk*/
+
+/* =========================
+   MOBILE FIX: NAV + HERO
+   ========================= */
+
+@media (max-width: 768px) {
+
+  /* NAV BAR */
+  .nav {
+    padding: 14px 16px;
+  }
+
+  .nav-left {
+    gap: 12px;
+  }
+
+  .nav-left a {
+    font-size: 14px;
+  }
+
+  .nav-right {
+    gap: 8px;
+  }
+
+  .nav-right .btn {
+    padding: 8px 14px;
+    font-size: 13px;
+  }
+
+  /* HERO SECTION */
+  .hero,
+  .hero-video {
+    min-height: 90vh;
+    padding: 0 16px;
+  }
+
+  .hero-content {
+    max-width: 100%;
+    text-align: center;
+    padding: 0;
+  }
+
+  .hero-content h1 {
+    font-size: 26px;
+    line-height: 1.25;
+  }
+
+  .hero-content p {
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 20px;
+  }
+
+  .hero-buttons .btn {
+    width: 100%;
+    max-width: 280px;
+    margin: 0 auto;
+  }
+}
+/* =========================
+   MOBILE FIX: MOCKUPS
+   ========================= */
+
+@media (max-width: 768px) {
+
+  .mockups,
+  .mockups-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .mockups img,
+  .mockup-card img {
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+  }
+
+  .mockup-card {
+    padding: 0 16px;
+    text-align: center;
+  }
+
+  .mockup-card h3 {
+    font-size: 17px;
+    margin-top: 12px;
+  }
+
+  .mockup-card p {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+}
