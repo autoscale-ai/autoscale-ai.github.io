@@ -1367,3 +1367,112 @@ a { color: inherit; text-decoration: none; }
     line-height: 1.6;
   }
 }
+/* ===============================
+   MOBILE FIX — HERO & NAV
+================================ */
+@media (max-width: 768px) {
+
+  /* NAVBAR */
+  .nav {
+    padding: 12px 16px;
+    flex-wrap: wrap;
+  }
+
+  .nav-left {
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .nav-left a {
+    font-size: 14px;
+    margin-right: 10px;
+  }
+
+  .nav-right {
+    display: none; /* mobile par login/signup hide */
+  }
+
+  /* HERO SECTION */
+  .hero,
+  .hero-video {
+    min-height: 100vh;
+    padding: 0 16px;
+    text-align: center;
+  }
+
+  .hero-content {
+    max-width: 100%;
+    padding: 0 10px;
+  }
+
+  .hero-content h1 {
+    font-size: 26px;
+    line-height: 1.3;
+  }
+
+  .hero-content p {
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  .hero-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+  }
+
+  .hero-buttons .btn {
+    width: 100%;
+    max-width: 260px;
+    text-align: center;
+  }
+}
+/* ===============================
+   MOBILE FIX — AUTOMATION MOCKUPS
+================================ */
+.automation-mockups {
+  padding: 60px 20px;
+}
+
+.mockups-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+.mockup-box {
+  background: rgba(255,255,255,0.04);
+  border-radius: 16px;
+  padding: 20px;
+  text-align: center;
+}
+
+.mockup-box img {
+  width: 100%;
+  max-width: 220px;   /* 🔥 image control */
+  height: auto;
+  margin: 0 auto 16px;
+  display: block;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .mockups-grid {
+    grid-template-columns: 1fr; /* 1 column on mobile */
+  }
+
+  .mockup-box img {
+    max-width: 180px; /* 🔥 image chhoti */
+  }
+
+  .mockup-box h3 {
+    font-size: 18px;
+  }
+
+  .mockup-box p {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+}
