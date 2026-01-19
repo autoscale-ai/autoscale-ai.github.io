@@ -675,26 +675,33 @@ function saveLead(name, email, message) {
 <script>
 function unlockSite() {
   const response = grecaptcha.getResponse();
+
   if (!response) {
     alert("Please verify you are human.");
     return;
   }
 
+  // Save verification with expiry
+  const expiryTime = Date.now() + (7 * 24 * 60 * 60 * 1000); // 7 days
+
+  localStorage.setItem("human_verified", "true");
+  localStorage.setItem("human_verified_expiry", expiryTime);
+
   document.getElementById("human-check").style.display = "none";
-  localStorage.setItem("human_verified", "yes");
 }
 
-window.onload = () => {
-  if (localStorage.getItem("human_verified") === "yes") {
+// Check verification on page load
+window.addEventListener("load", () => {
+  const verified = localStorage.getItem("human_verified");
+  const expiry = localStorage.getItem("human_verified_expiry");
+
+  if (verified === "true" && expiry && Date.now() < expiry) {
     document.getElementById("human-check").style.display = "none";
+  } else {
+    localStorage.removeItem("human_verified");
+    localStorage.removeItem("human_verified_expiry");
   }
-};
-</script>
-<!--after footer add by zohaib-->
-<script>
-function unlockSite(){
-  document.getElementById("human-check").style.display="none";
-}
+});
 </script>
 
 </body>
