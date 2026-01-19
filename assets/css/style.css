@@ -1620,3 +1620,9 @@ section .btn {
 .navbar button.login {
   color: #000 !important;   /* black text */
 }
+/* FIX: Navbar Login button text visibility */
+.navbar a[href*="login"],
+.navbar .login,
+.navbar .login-btn {
+  color: #000 !important;   /* force black text */
+}
