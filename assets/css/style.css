@@ -1596,3 +1596,21 @@ section button,
 section .btn {
   text-shadow: 0 1px 2px rgba(0,0,0,0.4);
 }
+/* ============================= */
+/* EXTRA HY NEW CHAT WALA CODE HERO MY JO   PROBBLEM  THI BOOK A FREE CAL WALA BUTTON FUNCTIONAL NAHI THA */
+/* ============================= */
+
+/* FIX: Hero overlay click issue */
+.hero-overlay {
+  pointer-events: none;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-video {
+  position: absolute;
+  z-index: 0;
+}
